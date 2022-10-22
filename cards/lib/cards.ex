@@ -47,14 +47,11 @@ defmodule Cards do
     Enum.split(deck, hand_size)
   end
   def save(deck,filename) do
-    # For converting the data into something saveable in a non elixir environment as the operating system
     binary = :erlang.term_to_binary(deck)
     File.write(filename, binary)
   end
 
   def load(filename) do
-    # Avoid if statements
-    # This is using pattern matching with case statement
     case File.read(filename) do
     {:ok, binary} -> :erlang.binary_to_term binary
     {:error, _reason} -> "That file does not exist"
@@ -62,10 +59,6 @@ defmodule Cards do
   end
 
   def create_hand(hand_size) do
-    # deck = Cards.create_deck
-    # deck = Cards.shuffle(deck)
-    # hand = Cards.deal(deck, hand_size)
-
     Cards.create_deck
     |> Cards.shuffle
     |> Cards.deal(hand_size)
