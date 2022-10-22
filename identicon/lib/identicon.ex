@@ -18,7 +18,6 @@ defmodule Identicon do
     image = :egd.create(250,250)
     fill = :egd.color(color)
 
-    # Transforming the object itself. This is odd
     Enum.each pixel_map, fn({start, stop}) ->
       :egd.filledRectangle(image, start, stop, fill)
     end
