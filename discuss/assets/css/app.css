@@ -2,6 +2,12 @@
 @import "./phoenix.css";
 
 /* Alerts and form errors used by phx.new */
+
+.form-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
 .alert {
   padding: 15px;
   margin-bottom: 20px;
@@ -33,6 +39,8 @@
   color: #a94442;
   display: block;
   margin: -1rem 0 2rem;
+  color: red;
+  text-transform: capitalize;
 }
 
 /* LiveView specific classes for your customization */
