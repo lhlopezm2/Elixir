@@ -5,8 +5,6 @@ defmodule DiscussWeb.AuthController do
   alias Discuss.Repo
 
   def callback(%{assigns: %{ueberauth_auth: auth}}=conn, _params) do
-    #IO.inspect("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
-    #IO.inspect(conn.assigns)
     user_params = %{token: auth.credentials.token, email: auth.info.email, provider: "github"}
     changeset = User.changeset(%User{},user_params)
 
