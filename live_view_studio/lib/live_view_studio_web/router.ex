@@ -17,6 +17,7 @@ defmodule LiveViewStudioWeb.Router do
   scope "/", LiveViewStudioWeb do
     pipe_through :browser
 
+    live "/light", LightLive
     get "/", PageController, :index
   end
 

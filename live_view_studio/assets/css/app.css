@@ -99,6 +99,27 @@
   animation: 0.2s ease-out 0s normal forwards 1 fade-out-keys;
 }
 
+.meter {
+  display: flex;
+  overflow: hidden;
+  background-color: #e2e8f0;
+  border-radius: 0.75rem;
+  margin-bottom: 2rem;
+  height: 4rem;
+}
+
+.meter span {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #faf089;
+  text-align: center;
+  white-space: nowrap;
+  font-weight: 700;
+  font-size: 1.5rem;
+  transition: width 2s ease;
+}
+
 @keyframes fade-in-scale-keys{
   0% { scale: 0.95; opacity: 0; }
   100% { scale: 1.0; opacity: 1; }
